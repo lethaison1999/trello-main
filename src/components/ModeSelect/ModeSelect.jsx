@@ -15,14 +15,29 @@ function ModeSelect() {
     setMode(event.target.value)
   }
   return (
-    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-      <InputLabel id="label-select-dart-light-mode">Mode</InputLabel>
+    <FormControl size="small" sx={{ minWidth: 120 }}>
+      <InputLabel
+        id="label-select-dart-light-mode"
+        sx={{
+          color: 'white',
+          '&.Mui-focused': { color: 'white' }
+        }}
+      >
+        Mode
+      </InputLabel>
       <Select
         labelId="label-select-dart-light-mode"
         id="select-dart-light-mode"
         value={mode}
         label="Mode"
         onChange={handleChange}
+        sx={{
+          color: 'white',
+          '.MuiOutlinedInput-notchedOutline': { borderColor: '#ccc' },
+          '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: 'white' },
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: 'white' },
+          '.MuiSvgIcon-root ': { color: 'white' }
+        }}
       >
         <MenuItem value="light">
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
