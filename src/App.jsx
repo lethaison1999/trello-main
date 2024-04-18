@@ -1,10 +1,12 @@
 import Board from '~/pages/Boards/_id'
-
+import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <>
-      {/* react router dom => tuyen duong di */}
-      <Board />
+      <Routes>
+        <Route path="/" element={<Board />} />
+        <Route path="/:boardId" element={<Board />} />
+      </Routes>
     </>
   )
 }
